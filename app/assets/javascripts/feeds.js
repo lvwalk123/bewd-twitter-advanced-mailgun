@@ -111,9 +111,9 @@ $(".feeds.index").ready(function(){
             <a class="tweet-screenName" href="#">@'+tweets[index]['username']+'</a> \
             <a class="delete-tweet" id="'+tweets[index]['id']+'" href="#">Delete</a>'
 
-          if (tweets[index]['image'] !== undefined) {
+          if (tweets[index]['image']) { // checks for undefined, null, or empty string
             html += '<img src="' + tweets[index]['image'] + '" class="img img-responsive">'
-          }
+            }
 
           html += '<p>'+tweets[index]['message']+'</p> \
             </div>'

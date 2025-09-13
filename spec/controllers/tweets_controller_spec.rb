@@ -34,7 +34,7 @@ RSpec.describe TweetsController, type: :controller do
       post :create, params: {
         tweet: {
           message: 'Test Message',
-          image: fixture_file_upload('test.png')
+          image: fixture_file_upload('test.png', 'image/png')
         }
       }
 
