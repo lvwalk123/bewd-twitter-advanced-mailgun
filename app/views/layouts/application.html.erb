@@ -4,7 +4,6 @@
     <title>Twitter</title>
     <%= csrf_meta_tags %>
 
-    <%= javascript_include_tag 'application' %>
     <!-- loading jquery library bootstrap jquery library and custom app.js -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
@@ -17,5 +16,7 @@
 
   <body class="<%= controller_name %> <%= action_name %>">
     <%= yield %>
+
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
   </body>
 </html>
